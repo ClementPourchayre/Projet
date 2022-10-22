@@ -1,0 +1,280 @@
+﻿/*Animation d'onglets*/
+.tabs-component {
+    margin: 100px auto 0;
+    max-width: 600px;
+    min-height: 300px;
+    background: #333;
+    border-radius: 2px;
+    position: relative;
+    border: 2px solid #f1f1f125
+}
+.tabs-container {
+    background: #333;
+    display: flex;
+    border-bottom: 1px solid #333;
+}
+.tabs {
+    flex-grow: 1;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: Raleway;
+    font-style: italic;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid #f1f1f125;
+    background: #333;
+    color: #f1f1f1;
+}
+.tabs:not(:nth-child(3)) {
+    border-right: 1px solid #f1f1f125;
+}
+
+.content {
+    width: 100%;
+    display: none;
+    color: #f1f1f1;
+    padding: 20px;
+}
+.content h3 {
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.content p {
+    font-family: Open sans;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.active-content {
+    display: block;
+}
+.active {
+    background: linear-gradient(to right, #1b691f, #1ebe10);
+}
+
+/*Slider*/
+.main-content {
+    padding: 3vw 5vw 5vw;
+}
+
+.slideshow-container {
+    margin-top: 4vw;
+    overflow: hidden;
+    min-height: 60vmin;
+    cursor: grab;
+    position: relative;
+}
+
+.slideshow-container:active {
+    cursor: grabbing;
+}
+
+.slideshow {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+.slide {
+    flex-shrink: 0;
+    height: 100%;
+    width: 80vmin;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide:not(:nth-child(1)) {
+    margin-left: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.slide h2,
+.slide a {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+}
+
+.slide h2 {
+    position: absolute;
+    top: clamp(10px, 2vw, 20px);
+    left: clamp(10px, 2vw, 20px);
+    font-size: clamp(20px, 3vw, 40px);
+    font-weight: 300;
+}
+
+.slide a {
+    position: absolute;
+    bottom: clamp(10px, 2vw, 20px);
+    right: clamp(10px, 2vw, 20px);
+    font-size: clamp(16px, 3vw, 20px);
+    font-weight: 300;
+    color: #fff;
+    pointer-events: auto;
+}
+
+
+.s11 {
+    background-image: url("../images/Seeder_1.webp");
+}
+
+.s21 {
+    background-image: url("../images/Soil_1.webp");
+}
+
+.s31 {
+    background-image: url("../images/Water_1.webp");
+}
+
+.s41 {
+    background-image: url("../images/Weeder_1.webp");
+}
+
+.s51 {
+    background-image: url("../images/Camera-2.webp");
+}
+
+footer {
+    flex-shrink: 0;
+    border-top: 1px dashed #000;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.content-footer {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 16px;
+    padding: 50px 0 50px;
+}
+
+.bloc {
+    flex-basis: 20%;
+    margin: 0 30px;
+}
+
+/* contact */
+.footer-contact h3,
+.footer-services h3,
+.footer-schedule h3,
+.footer-medias h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p {
+    padding: 5px 0;
+}
+
+/* Services */
+
+.services-list,
+.schedule-list,
+.media-list {
+    list-style-type: none;
+    margin-right: 10px;
+    /*margin-left: 10px;
+    margin:100px;*/
+
+}
+.services-list li {
+    padding: 2px 0;
+}
+.services-list a {
+    text-decoration: none;
+    color: #fff;
+}
+.services-list a:hover {
+    color: #fff;
+}
+
+/* Medias */
+
+.media-list {
+    position: relative;
+    right: 10px;
+}
+.media-list svg {
+    width: 30px;
+    margin: 10px 10px;
+}
+.media-list a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 1000px) {
+
+    .content-footer {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .bloc {
+        flex-basis: auto;
+        margin: 20px 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 600px) {
+    .content-footer {
+        justify-content: center;
+        padding-top: 30px;
+    }
+    .bloc {
+        flex-basis: 70%;
+        /* margin: 10px; */
+    }
+    .footer-contact h3,
+    .footer-services h3,
+    .footer-schedule h3,
+    .footer-medias h3 {
+        padding-bottom: 5px;
+    }
+
+}
+
+.button-onglet{
+
+    border-radius: 10px;
+    background: linear-gradient(to right, #1b691f, #1ebe10, #1b691f);
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    width: 50%;
+    margin-left: 24%;
+    height: 50px;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline:0;
+}
+

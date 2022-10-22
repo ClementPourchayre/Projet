@@ -1,0 +1,53 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.home {
+	background: url("https://img.freepik.com/vecteurs-libre/theme-du-fond-ecran-fruits-legumes_23-2148502850.jpg?w=996&t=st=1652443197~exp=1652443797~hmac=d789ae2e945d157e460e00d4a921d45a4ec631059d6b870d5cad5807ef6927f2");
+	background-repeat: no-repeat;
+	background-attachment: fixed; 
+	background-size: cover;
+	height: 100vh;
+	/*padding-top: 125px;*/
+}
+
+.container {
+	margin: auto;
+	width: /*450px*/100%;
+	height: /*275px*/100%;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4);	
+	border-radius: 5px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container button{
+	padding: 10px 15px;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+	font-family: Lora;
+	background: #b6604f;
+	color: #f1f1f1;
+	font-size: 27px;
+	padding: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 800;
+}
+.container:before {
+	content: "";
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	inset: 0;
+	filter: blur(10px);
+	margin: -20px;
+}
